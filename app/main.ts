@@ -1,3 +1,8 @@
+// Polyfill for older browsers
+import 'core-js/client/shim.min.js';
+import 'zone.js/dist/zone.js';
+import 'reflect-metadata/Reflect.js';
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
