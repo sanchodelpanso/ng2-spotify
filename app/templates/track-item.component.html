@@ -1,0 +1,11 @@
+<div class="track__item" [class.active]="isActive">
+    <button class="btn --inversed" (click)="toogleState()">
+        <i [hidden]="isActive" class="fa fa-play"></i>
+        <i [hidden]="!isActive" class="fa fa-pause"></i>
+    </button>
+    <h5>{{ track.name }}</h5>
+
+    <div class="track__percentage">
+        <div class="track__played" [style.right]="(100 - progress) + '%'"></div>
+    </div>
+</div>

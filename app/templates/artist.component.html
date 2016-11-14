@@ -1,0 +1,12 @@
+<section>
+    <div class="container">
+        <div class="artist__header">
+            <h1 class="artist__name">{{ artist.name }}</h1>
+        </div>
+    </div>
+    <div class="page__angle__bg page__grid__wrap">
+        <div class="container">
+            <grid [items]="artist.albums"></grid>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,16 @@
+<section class="album__page">
+    <div class="page__angle__bg --inverse__side">
+        <div class="container text-right">
+            <img *ngIf="album.images.large" src="{{ album.images.large }}" class="album__image"/>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="album__header">
+            <h1 class="album__name">{{ album.name }}</h1>
+        </div>
+        <div class="album__tracklist">
+            <track-item *ngFor="let track of album.tracks.items" (play)="onPlay( $event )" [anyPlay]="anyPlay" [track]="track"></track-item>
+        </div>
+    </div>
+</section>

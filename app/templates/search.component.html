@@ -1,0 +1,29 @@
+<section>
+    <div class="container">
+        <header class="search__header">
+            <h1>Ready to search your music?</h1>
+            <div *ngIf="type == 'artist'">
+
+                <div class="search__input">
+                    <i class="fa fa-search"></i>
+                    <a class="header__link btn --inverse" routerLink="/search-type/album">Search by Albums</a>
+                    <input [formControl]="search" type="text" placeholder="Search Some Artist"/>
+                </div>
+            </div>
+            <div *ngIf="type == 'album'">
+
+                <div class="search__input">
+                    <i class="fa fa-search"></i>
+                    <a class="header__link btn --inverse" routerLink="/search-type/artist">Search by Artists</a>
+                    <input [formControl]="search" type="text" placeholder="Search Some Album"/>
+                </div>
+            </div>
+
+        </header>
+    </div>
+    <div class="page__angle__bg page__grid__wrap">
+        <div class="container">
+            <grid [items]="items"></grid>
+        </div>
+    </div>
+</section>

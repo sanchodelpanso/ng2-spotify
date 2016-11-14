@@ -1,0 +1,14 @@
+<div class="grid__container --grid__columns__4">
+    <div *ngFor="let item of items" class="grid__item">
+        <div class="grid__item__content__wrap">
+            <div class="grid__item__content">
+                <img *ngIf="item.images.medium" src="{{item.images.medium}}"/>
+                <i class="fa fa-spotify grid__item__no__image" *ngIf="!item.images.medium"></i>
+                <a routerLink="/{{item.type}}/{{item.id}}"></a>
+                <div class="grid__item__info">
+                    <span class="btn --inverse">{{item.name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
